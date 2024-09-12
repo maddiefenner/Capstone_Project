@@ -231,7 +231,7 @@ def musical_puzzle():
 pName = input("What is your name? > ")
 print("Welcome to The Mystery of the Vanishing Virtuoso, " + pName + "!")
 starline(1,2)
-print("Here you will create your character. Choose a class from the options\n "
+print("Here you will create your character. Choose a class from the options\n"
       "below by telling me which number best suits your character!")
 starline(1,2)
 for i in range(len(originType)):
@@ -244,9 +244,8 @@ pClass = checkMenuRange("Choose your class by inputting the number corresponding
 print("You have chosen " + originType[pClass] + "!")
 pStats = originStats[pClass]
 starline(1,3)
-print("Welcome!"
-      "You are now " + pName + ", a well known " + originType[pClass] + "!\n"
-      " You reside in Connecticut and are currently in your home.")
+print("Welcome! You are now " + pName + ", a well known " + originType[pClass] + "!\n"
+      "You reside in Connecticut and are currently in your home.")
 if originType[pClass] == 'Surfer':
     print("Actually... It's kind of weird that a surfer\n"
           "lives in Connecticut... but okay."
@@ -275,7 +274,7 @@ elif originType[pClass] == 'Musician':
 starline(1,1)
 input("Press enter to continue...")
 starline(1,1)
-print(" You sort through your mail. Amongst the junk, you find an invitation. It's addressed as follows: \n"
+print("You sort through your mail. Amongst the junk, you find an invitation. It's addressed as follows: \n"
       "Dear " + pName + ", you are cordially invited to the birthday party of World \n"
                         "Renowned Musician Eliza Blackwood. She will also perform her newest composition. \n"
                         "Please respond in kind.")
@@ -299,7 +298,7 @@ starline(1,1)
 print("When you arrive, you joined by a few other guests. You recognize a few of them, \n"
       "but others you've never seen before. You all shuffle into the mansion, ready to\n"
       "find what's awaiting you.")
-print("Eliza Blackwood stands at in the foyer, arms wide open. She smiles.")
+print("Eliza Blackwood stands in the foyer, arms wide open. She smiles.")
 print("Eliza: 'Welcome everyone! Please, please, come inside. We have quite \n"
       "the celebrations planned. We'll get you some refreshments soon, but first, \n"
       "I'd like to introduce our guests. Victor, please.'")
@@ -315,12 +314,12 @@ print("Eliza: 'My good friend " + pName +"!'")
 print("You wave to the others.")
 print("Eliza: And finally, a good... friend, Olivia.")
 print("A young girl ignores the rest of you, keeping her sights on Eliza.")
-print("Eliza: 'And now, please as you meander and mingle, I will play a new song on the piano.'")
+print("Eliza: 'And now, as you meander and mingle, I will play a new song on the piano.'")
 starline(1,1)
 input("Press enter to continue...")
 starline(1,1)
-print("Eliza walks to the side of the foyer, where a piano sits. \nShe sits at it, smiling one last time before "
-      "turning her attention to the keys. Her fingers linger on the starting keys,\n and seconds later you hear "
+print("Eliza walks to the side of the foyer, where a piano sits. She sits at it, smiling one last time before "
+      "turning her attention to the keys.\n Her fingers linger on the starting keys, and seconds later you hear "
       "the first few notes of what seems to be a beautiful composition. \nSuddenly, the lights cut out and the "
       "party guests are plunged into darkness. The music stops.")
 print("One of the men gasps, while the others seem to be shocked into silence. \n"
