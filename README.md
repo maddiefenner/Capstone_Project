@@ -12,6 +12,8 @@ There is no other program to install in addition to Python 3
 There are opportunities to end the game without truly finishing the main storyline. Some are funny, some aren't. Regardless, if you hit one of these, you'll have to restart. They're moreso there so I could practice with exiting a code early, failing a task or puzzle, etc. 
 The suspects all have unique dialogue and provide insight on why they're suspects. Major clues are in each room. 
 
+Gameplay is also dependent on player interactions coinsiding with directions. While some inputs have various respones, most are yes or no questions. The game will not proceed unless the player follows the directions provided in the prompts. 
+
 ## Future directions
 There is a ton of potential for this game, including character stats, more puzzles, etc. I will be using this as a pet project and as a workspace to add new things I learn as I progress with Python. 
 
