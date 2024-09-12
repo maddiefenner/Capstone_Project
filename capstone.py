@@ -1,6 +1,4 @@
 import time
-import math
-import random
 
 # Behind the scenes stuff
 originType = ['Musician', 'Detective', 'Surfer']
@@ -15,7 +13,7 @@ correctSequence = ['C', 'A', 'D', 'E']
 Locations = ["kitchen", "den", "living Room", "bar"]
 activityMenu = ["View stats", "Move location", "Inventory"]
 actionMenu = ["Talk to suspect", "Search for clues", "Leave room"]
-pianoMenu = ["Look at the key", "Inspect the piano case", "Leave the piano"]
+pianoMenu = ["Look at the keys", "Inspect the piano case", "Leave the piano"]
 inventory = ["Invitation"]
 guests = {
     "Victor Reeves": {
@@ -185,11 +183,10 @@ def talk_to_guest(guest_name):
         print("\nWhat would you like to say?")
         for num, option in guest['dialogue']['options'].items():
             print(f"{num}: {option['prompt']}")
+        print("4. End conversation")
         starline(1,1)
-        print("0. End conversation")
-
         choice = input("> ")
-        if choice == "0":
+        if choice == "4":
             print(f"You thank {guest_name} and end the conversation.")
             break
         elif choice in [str(num) for num in guest['dialogue']['options'].keys()]:
@@ -232,9 +229,9 @@ def musical_puzzle():
     return False
 # Defining the character
 pName = input("What is your name? > ")
-print("Welcome to The Mystery of the Blackwood Disappearance, " + pName + "!")
+print("Welcome to The Mystery of the Vanishing Virtuoso, " + pName + "!")
 starline(1,2)
-print("Here you will create your character. Choose a class from the options \n "
+print("Here you will create your character. Choose a class from the options\n "
       "below by telling me which number best suits your character!")
 starline(1,2)
 for i in range(len(originType)):
@@ -248,17 +245,17 @@ print("You have chosen " + originType[pClass] + "!")
 pStats = originStats[pClass]
 starline(1,3)
 print("Welcome!"
-      "You are now " + pName + ", a well known " + originType[pClass] + "!"
+      "You are now " + pName + ", a well known " + originType[pClass] + "!\n"
       " You reside in Connecticut and are currently in your home.")
 if originType[pClass] == 'Surfer':
-    print("Actually... It's kind of weird that a surfer "
+    print("Actually... It's kind of weird that a surfer\n"
           "lives in Connecticut... but okay."
-          "You've built quite a following by traveling the \n"
-          "coastlines and venturing to tropical islands. \n"
+          "You've built quite a following by traveling the\n"
+          "coastlines and venturing to tropical islands.\n"
           "With your only income coming from sponsorships,\n"
-          " you've managed to become quite the smooth-talker. \n"
-          "Should you run into any trouble on your upcoming \n"
-          "journey, you'll have the charisma to charm any potential \n"
+          "you've managed to become quite the smooth-talker.\n"
+          "Should you run into any trouble on your upcoming\n"
+          "journey, you'll have the charisma to charm any potential\n"
           "suspects.")
 elif originType[pClass] == 'Detective':
     print("As a seasoned detective you are well-known in \n"
@@ -277,10 +274,11 @@ elif originType[pClass] == 'Musician':
           "pretty lucky!")
 starline(1,1)
 input("Press enter to continue...")
+starline(1,1)
 print(" You sort through your mail. Amongst the junk, you find an invitation. It's addressed as follows: \n"
       "Dear " + pName + ", you are cordially invited to the birthday party of World \n"
                         "Renowned Musician Eliza Blackwood. She will also perform her newest composition. \n"
-                        " Please respond in kind.")
+                        "Please respond in kind.")
 
 exitInput = input("Would you like to accept the invitation? (Yes or no) > ")
 if exitInput == "No":
@@ -293,13 +291,14 @@ else:
 starline(2,2)
 print("You have arrived!")
 starline(1,1) 
-print("As you make your way up the gravel driveway, you notice the \n "
-      "opulent Blackwood Manor looming before you, a grand Victorian edifice \n "
+print("As you make your way up the gravel driveway, you notice the \n"
+      "opulent Blackwood Manor looming before you, a grand Victorian edifice \n"
       "silhouetted against the stormy night sky. Lightning flashes, briefly illuminating \n" 
       "the mansion's ornate facade and casting eerie shadows across the manicured grounds.")
 starline(1,1)
-print("When you arrive, you joined by a few other guests. You recognize a few of them, but others you've never"
-      " seen before. You all shuffle into the mansion, ready to find what's awaiting you.")
+print("When you arrive, you joined by a few other guests. You recognize a few of them, \n"
+      "but others you've never seen before. You all shuffle into the mansion, ready to\n"
+      "find what's awaiting you.")
 print("Eliza Blackwood stands at in the foyer, arms wide open. She smiles.")
 print("Eliza: 'Welcome everyone! Please, please, come inside. We have quite \n"
       "the celebrations planned. We'll get you some refreshments soon, but first, \n"
@@ -312,7 +311,7 @@ print("Eliza: 'And Sophia... a dear protegee.'")
 print("An unfamiliar woman with a large smile nods to you. She seems stressed ")
 print("Eliza: 'My cousin Theodore.")
 print("Theodore Blackwood smiles at the rest of you.")
-print("Eliza: 'My good friend " + pName +"!")
+print("Eliza: 'My good friend " + pName +"!'")
 print("You wave to the others.")
 print("Eliza: And finally, a good... friend, Olivia.")
 print("A young girl ignores the rest of you, keeping her sights on Eliza.")
@@ -320,9 +319,9 @@ print("Eliza: 'And now, please as you meander and mingle, I will play a new song
 starline(1,1)
 input("Press enter to continue...")
 starline(1,1)
-print("Eliza walks to the side of the foyer, where a piano sits. She sits at it, smiling one last time before "
-      "turning her attention to the keys. Her fingers linger on the starting keys, and seconds later you hear "
-      "the first few notes of what seems to be a beautiful composition. Suddenly, the lights cut out and the "
+print("Eliza walks to the side of the foyer, where a piano sits. \nShe sits at it, smiling one last time before "
+      "turning her attention to the keys. Her fingers linger on the starting keys,\n and seconds later you hear "
+      "the first few notes of what seems to be a beautiful composition. \nSuddenly, the lights cut out and the "
       "party guests are plunged into darkness. The music stops.")
 print("One of the men gasps, while the others seem to be shocked into silence. \n"
       "You hear someone say, 'Oh no!'")
@@ -341,7 +340,7 @@ if originType[pClass] == 'Detective':
     print("Olivia balks. 'Aren't you a detective? Shouldn't you start looking for her?'")
 if originType[pClass] == 'Musician':
     print("Victor laughs. 'You and her are close, since you're both musicians. Perhaps you might find her quicker \n"
-          "than the rest of us.")
+          "than the rest of us.'")
 print("With a sigh, you nod your head and decide to start looking for your friend, Eliza.")
 starline(1,1)
 
@@ -427,7 +426,7 @@ while inGameLoop:
                             elif pianoChoice == 1:
                                 print("You inspect the piano. Nothing seems to be of note until you take a step back. "
                                       "On the legs, there's some sort of code scratched into the wood. It says: "
-                                      "B1, L2, D3, K4")
+                                      "L4, L2, B1, D3")
                             elif pianoChoice == 2:
                                 print("You back away from the piano and return to your attention to the room.")
                                 piano = False
@@ -438,14 +437,14 @@ while inGameLoop:
         print("Inventory")
         showInventory(inventory)
         starline(1, 3)
-print("As the music fades from the piano, the locked door opens. Olivia glances at it, but seemingly doesn't care"
-      " enough to ask about it. You enter the secret room. There's a journal on the table that reads: "
+print("As the music fades from the piano, the locked door opens. \nOlivia glances at it, but seemingly doesn't care"
+      " enough to ask about it. You enter the secret room. \nThere's a journal on the table that reads: "
       " (dated one week before the party) : \n"
-      "Sometimes I wonder if the pressure is worth it. I am constantly forced to change my image or sound "
-      "so I'll continue to be liked by society. Perhaps a new type performance will capture their interest.")
-print("Then there are indentations on the page, as if someone wrote something on the page before and tore it out.")
-print("You take the evidence you've collected and ponder who is responsible for the crime. You think of what the "
-      "suspects have claimed and the journal entry. There is only one plausible culprit behind Eliza's "
+      "Sometimes I wonder if the pressure is worth it. I am constantly \nforced to change my image or sound "
+      "so I'll continue to be liked by society. Perhaps a new type performance \nwill capture their interest.")
+print("Then there are indentations on the page, as if someone wrote something \non the page before and tore it out.")
+print("You take the evidence you've collected and ponder who is responsible for \nthe crime. You think of what the "
+      "suspects have claimed and the journal entry. There is only \none plausible culprit behind Eliza's "
       "disappearance.")
 inSuspect = True
 while inSuspect:
