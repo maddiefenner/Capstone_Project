@@ -410,7 +410,7 @@ while inGameLoop:
                             pianoChoice = checkMenuRange("What would you like to do at the piano?", pianoMenu)
                             if pianoChoice == 0:
                                 print("Your fingers linger over the keys.")
-                                pianoPlay = input("Would you like to play? > ")
+                                pianoPlay = input("Would you like to play? (Yes or no) > ")
                                 if pianoPlay == "Yes":
                                     if musical_puzzle():
                                         piano = False
@@ -447,7 +447,7 @@ print("You take the evidence you've collected and ponder who is responsible for 
       "disappearance.")
 inSuspect = True
 while inSuspect:
-    suspectChoice = input("Who do you think is the culprit? > ")
+    suspectChoice = input("Who do you think is the culprit? (Type the first name of the culprit) > ")
     if suspectChoice == "Eliza":
         starline(1,1)
         print("Correct!")
@@ -468,16 +468,16 @@ print()
 print("'And now that you've found me, what are you going to do? Turn me in to the authorities?'")
 print()
 
-elizaChoice = input("What will you do? (1. Turn her in, 2. Let her go) > ")
+elizaChoice = input("Will you let her go? (Yes or no) > ")
 
-if elizaChoice == "1":
+if elizaChoice == "No":
     print("'I knew you wouldn't understand, Eliza says, shaking her head in disappointment.'")
     print("'Very well, then. I suppose I'll have to face the consequences of my actions.'")
     print()
     print("You escort Eliza out of the hidden room and contact the police, ensuring she is held accountable for her \n"
           "deception.")
     print("The mystery of the Vanishing Virtuoso has been solved.")
-elif elizaChoice == "2":
+elif elizaChoice == "Yes":
     print("'I see, Eliza says, her eyes widening in surprise. You're letting me go?'")
     print("'Thank you. I promise I'll use this second chance to focus on my music, \n "
           "and not let the pressures of fame consume me again.'")
