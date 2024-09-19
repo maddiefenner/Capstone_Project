@@ -10,10 +10,10 @@ notes = ['C', 'D', 'E', 'F', 'G', 'A', 'B']
 correctSequence = ['C', 'A', 'D', 'E']
 
 # World building
-Locations = ["Kitchen", "Den", "Living Room", "Bar", "Pause Game"]
+Locations = ["Kitchen", "Den", "Living Room", "Bar", "Pause game"]
 activityMenu = ["View stats", "Move location", "Inventory", "Pause Game"]
-actionMenu = ["Talk to suspect", "Search for clues", "Leave room", "Pause Game"]
-pianoMenu = ["Look at the keys", "Inspect the piano case", "Leave the piano", "Pause Game"]
+actionMenu = ["Talk to suspect", "Search for clues", "Leave room", "Pause game"]
+pianoMenu = ["Look at the keys", "Inspect the piano case", "Leave the piano", "Pause game"]
 inventory = ["Invitation"]
 guests = {
     "Victor Reeves": {
@@ -286,8 +286,7 @@ print("You sort through your mail. Amongst the junk, you find an invitation. It'
                         "Please respond in kind.")
 def accept_invitation():
     while True:
-        print("\nWould you like to accept the invitation? (Yes or No) > ")
-        print("Do you accept the invitation?")
+        print("\nWould you like to accept the invitation?")
         inviteChoice = input("Yes or no > ").strip().lower()
         if inviteChoice == 'yes':
             print("\nYou've accepted the invitation. The mystery awaits!")
@@ -330,13 +329,13 @@ if accept_invitation():
     starline(1,1)
     input("Press enter to continue...")
     starline(1,1)
-    print("Eliza walks to the side of the foyer, and sits at a piano, smiling one last time before "
-          "turning her attention to the keys.\nHer fingers linger on the starting keys, and seconds later you hear "
-          "the first few notes of what seems to be a beautiful composition. \nSuddenly, the lights cut out and the "
+    print("Eliza walks to the side of the foyer, and sits at a piano, smiling one last time before"
+          "turning her attention to the keys.\nHer fingers linger on the starting keys, and seconds later you hear"
+          "the first few notes of what seems to be a beautiful composition. \nSuddenly, the lights cut out and the"
           "party guests are plunged into darkness. The music stops.")
-    print("One of the men gasps, while the others seem to be shocked into silence. \n"
+    print("One of the men gasps, while the others seem to be shocked into silence.\n"
           "You hear someone say, 'Oh no!'")
-    print("A few more minutes pass, an uncertainty falling over the group. After a few minutes, \n"
+    print("A few more minutes pass, an uncertainty falling over the group. After a few minutes,\n"
           "the lights come back on. Eliza is gone.")
     starline(1,1)
     input("Press enter to continue...")
@@ -421,7 +420,7 @@ if accept_invitation():
                 elif travelChoice == 3:
                     print("You enter the bar.")
                     guestInformation("Olivia Sinclair")
-                    barChoice = checkMenuRange("What would you like to do? (0,1,2, or 3)", actionMenu)
+                    barChoice = checkMenuRange("What would you like to do? (0, 1, 2, or 3)", actionMenu)
                     if barChoice == 0:
                         talk_to_guest("Olivia Sinclair")
                     elif barChoice == 1:
@@ -501,8 +500,6 @@ if accept_invitation():
             print("Correct!")
             starline(1,1)
             inSuspect = False
-        elif suspectChoice == "p":
-            pause_game()
         else:
             print("Invalid choice. Try again!")
     # After the player correctly identifies Eliza as the suspect
@@ -521,7 +518,7 @@ if accept_invitation():
     elizaChoice = input("Will you let her go? (Yes or no) > ")
     elizaChoice = elizaChoice.lower()
     if elizaChoice == "no":
-        print("'I knew you wouldn't understand, Eliza says, shaking her head in disappointment.'")
+        print("'I knew you wouldn't understand,' Eliza says, shaking her head in disappointment.")
         print("'Very well, then. I suppose I'll have to face the consequences of my actions.'")
         print()
         print("You escort Eliza out of the hidden room and contact the police, ensuring she is held accountable for her \n"
